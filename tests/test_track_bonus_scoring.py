@@ -46,3 +46,11 @@ def test_fall_and_boundary_violation_are_penalized() -> None:
     outside = score_track_bonus(compute_track_bonus_metrics(_synthetic_rollout(track, 120.0, lateral=2.2), track))
     assert stable["composite_score"] > fall["composite_score"]
     assert stable["composite_score"] > outside["composite_score"]
+
+
+def test_startline_projection_does_not_count_as_completed_lap() -> None:
+    track = StandardOvalTrack()
+    rollout = _synthetic_rollout(track, 2.0)
+    metrics = compute_track_bonus_metrics(rollout, track)
+    assert 0.005 < metrics["lap_completion"] < 0.02
+    assert metrics["finish_time"] is None

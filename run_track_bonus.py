@@ -185,8 +185,7 @@ def rollout(
             }
 
             projection = planner.track.project_xy_to_track(snap["qpos"][:2])
-            progress = planner.track.lap_progress(snap["qpos"][:2])
-            terminal = snap["done"] or projection.out_of_bounds or progress >= 0.999
+            terminal = snap["done"] or projection.out_of_bounds
             if terminal:
                 frozen = True
                 frozen_snapshot = snap
