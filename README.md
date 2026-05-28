@@ -44,6 +44,12 @@ The notebook clones this repo, installs MuJoCo Playground dependencies, copies
 Go2 assets, optionally trains a low-level policy, runs the starter track
 evaluation, and renders a video.
 
+Read the full assignment requirements before changing code:
+
+```text
+docs/assignment_requirements.md
+```
+
 ## Low-Level Training
 
 The low-level policy uses the same Brax PPO checkpoint format as HW1:
@@ -126,7 +132,7 @@ go2_pg_env/track.py
 track_bonus/planner.py
 run_track_bonus.py
 train_highlevel_starter.py
-docs/track_bonus_assignment.md
+docs/assignment_requirements.md
 ```
 
 ## Submission
