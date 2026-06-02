@@ -1,0 +1,11 @@
+{
+  "team_name": "what_the_dog_doin",
+  "track2_option": "leaderboard",
+  "checkpoint_dir": "best_checkpoint",
+  "planner_config": "planner_config.json",
+  "planner_code": "track_bonus/planner.py",
+  "planner_weights": "planner_weights.npz, if used",
+  "high_level_planner_type": "learned",
+  "track_eval": "track_eval/results.json",
+  "notes": "Briefly describe your low-level training, learned high-level planner, and failed ideas."
+}

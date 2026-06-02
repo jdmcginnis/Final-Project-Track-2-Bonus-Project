@@ -86,7 +86,7 @@ def default_config() -> config_dict.ConfigDict:
                 feet_slip=-0.1,
                 feet_air_time=0.1,
             ),
-            tracking_sigma=0.25,
+            tracking_sigma=0.5,
             max_foot_height=0.1,
         ),
         pert_config=config_dict.create(
@@ -566,7 +566,11 @@ class Joystick(go2_base.Go2Env):
         3. increase the probability of non-zero `vy` and `yaw_rate` commands
         """
         del current_command
-        return self._cmd_min, self._cmd_max, self._cmd_b
+        return (
+        self._student_stage2_goal_min,
+        self._student_stage2_goal_max,
+        self._student_stage2_goal_b,
+        )
 
     def sample_command(self, rng: jax.Array, current_command: jax.Array) -> jax.Array:
         rng, y_rng, w_rng, z_rng = jax.random.split(rng, 4)
