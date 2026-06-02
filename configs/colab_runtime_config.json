@@ -39,7 +39,7 @@
   },
   "stage_1": {
     "name": "stage_1",
-    "num_timesteps": 10000000,
+    "num_timesteps": 13100000,
     "command_range": {
       "min": [
         0.0,
@@ -64,7 +64,7 @@
   },
   "stage_2": {
     "name": "stage_2",
-    "num_timesteps": 20000000,
+    "num_timesteps": 6550000,
     "command_range": {
       "min": [
         0.0,
@@ -86,13 +86,13 @@
       "command_range": {
         "min": [
           0.0,
-          -0.4,
-          -0.25
+          -0.3,
+          -0.1
         ],
         "max": [
           2.5,
-          0.4,
-          0.8
+          0.3,
+          0.4
         ]
       },
       "command_keep_prob": [
@@ -231,7 +231,7 @@
       256,
       128
     ],
-    "stage_1_num_timesteps": 10000000,
-    "stage_2_num_timesteps": 20000000
+    "stage_1_num_timesteps": 13100000,
+    "stage_2_num_timesteps": 6550000
   }
 }
