@@ -1,0 +1,11 @@
+{
+  "planner_type": "learned_mlp",
+  "weights_path": "learned_planner_weights.npz",
+  "num_hidden": 16,
+
+  "stand_seconds": 1.0,
+  "vx_min": 0.5,
+  "vx_max": 2.5,
+  "vy_max": 0.3,
+  "yaw_rate_max": 0.4
+}
